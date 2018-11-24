@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    app:
+        image: sgrio/alpine-sslocalproxy
+        volumes:
+            - ./ss.json:/etc/shadowsocks-libev/config.json
+        ports:
+            - 1080:1080
+            - 8118:8118
+        restart: always
+
